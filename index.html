@@ -1,78 +1,78 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Spotify</title>
-  <link rel="stylesheet" href="index.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Spotify - Cường</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<body>
+  <body>
+    <div class="layout">
+      <!-- SIDEBAR LEFT -->
+      <aside class="sidebar">
+        <h2>Your Library</h2>
+        <ul class="menu">
+          <li>Liked Songs</li>
+          <li>Daily Mix 1</li>
+          <li>Daily Mix 2</li>
+          <li>Indie</li>
+          <li>This is Taylor Swift</li>
+        </ul>
+      </aside>
 
-  <div class="layout">
+      <!-- MIDDLE CONTENT -->
+      <main class="content">
+        <header class="top-nav">
+          <input
+            class="search"
+            type="text"
+            placeholder="Search your music..."
+          />
+        </header>
 
-    <!-- SIDEBAR LEFT -->
-    <aside class="sidebar">
-      <h2>Your Library</h2>
-      <ul class="menu">
-        <li>Liked Songs</li>
-        <li>Daily Mix 1</li>
-        <li>Daily Mix 2</li>
-        <li>Indie</li>
-        <li>This is Taylor Swift</li>
-      </ul>
-    </aside>
+        <section class="playlist">
+          <h3>Made For You</h3>
+          <div class="card-list" id="songList">
+            <!-- Songs render bằng JS -->
+          </div>
+        </section>
+      </main>
 
-    <!-- MIDDLE CONTENT -->
-    <main class="content">
-      <header class="top-nav">
-        <input class="search" type="text" placeholder="Search your music...">
-      </header>
-
-      <section class="playlist">
-        <h3>Made For You</h3>
-        <div class="card-list" id="songList">
-          <!-- Songs render bằng JS -->
-        </div>
+      <!-- RIGHT NOW PLAYING -->
+      <section class="now-playing">
+        <h3>Now Playing</h3>
+        <img id="cover" src="default.jpg" class="song-cover" />
+        <h2 id="title">Chưa phát bài hát</h2>
+        <p id="artist">--</p>
       </section>
-    </main>
+    </div>
 
-    <!-- RIGHT NOW PLAYING -->
-    <section class="now-playing">
-      <h3>Now Playing</h3>
-      <img id="cover" src="default.jpg" class="song-cover">
-      <h2 id="title">Chưa phát bài hát</h2>
-      <p id="artist">--</p>
-    </section>
-
-  </div>
-
-  <!-- PLAYER BAR BOTTOM -->
-  <footer class="player">
-    <div class="player-left">
-      <img src="default.jpg" id="footerCover">
-      <div>
-        <h4 id="footerTitle">---</h4>
-        <p id="footerArtist">---</p>
+    <!-- PLAYER BAR BOTTOM -->
+    <footer class="player">
+      <div class="player-left">
+        <img src="default.jpg" id="footerCover" />
+        <div>
+          <h4 id="footerTitle">---</h4>
+          <p id="footerArtist">---</p>
+        </div>
       </div>
-    </div>
 
-    <div class="player-center">
-      <div class="controls">
-        <button id="prev">⏮️</button>
-        <button id="play">▶️</button>
-        <button id="next">⏭️</button>
+      <div class="player-center">
+        <div class="controls">
+          <button id="prev">⏮️</button>
+          <button id="play">▶️</button>
+          <button id="next">⏭️</button>
+        </div>
+        <input type="range" id="progressBar" class="progressBar" value="0" />
       </div>
-      <input type="range" id="progressBar" class="progressBar" value="0">
-    </div>
 
-    <div class="player-right">
-      <span>🔊</span>
-    </div>
-  </footer>
+      <div class="player-right">
+        <span>🔊</span>
+      </div>
+    </footer>
 
-  <audio id="audio"></audio>
-  <script src="index.js"></script>
-
-</body>
+    <audio id="audio"></audio>
+    <script src="index.js"></script>
+  </body>
 </html>
